@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites Menu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8ba3 100%);
+            color: #333;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            font-size: 48px;
+            margin-bottom: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #fff;
+            font-size: 32px;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ffd700, #ffa500);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 40px;
+        }
+
+        li {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        li:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        li img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        li:hover img {
+            transform: scale(1.08);
+        }
+
+        strong {
+            display: block;
+            font-size: 22px;
+            color: #2a5298;
+            margin: 18px 18px 10px 18px;
+            font-weight: 600;
+        }
+
+        li p {
+            font-size: 14px;
+            color: #666;
+            margin: 0 18px 18px 18px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        a {
+            display: inline-block;
+            text-align: center;
+            background: linear-gradient(135deg, #ffd700, #ffa500);
+            color: #333;
+            padding: 16px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+            margin-top: 30px;
+        }
+
+        a:hover {
+            background: linear-gradient(135deg, #ffa500, #ff8c00);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 165, 0, 0.4);
+        }
+
+        p:last-of-type {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            ul {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            li {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            strong {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Delicious Bites Menu</h1>
+
+    <h2>Appetizers</h2>
+    <ul>
+        <li>
+            <strong>Caprese Salad</strong>
+            <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=500&h=400&fit=crop" alt="Caprese Salad" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Fresh tomatoes, mozzarella, and basil drizzled with balsamic glaze.</p>
+        </li>
+        <li>
+            <strong>Garlic Bread</strong>
+            <img src="https://images.pexels.com/photos/5737442/pexels-photo-5737442.jpeg" alt="Garlic Bread" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Crispy toasted bread brushed with garlic butter and topped with fresh parsley.</p>
+        </li>
+        <li>
+            <strong>Shrimp Cocktail</strong>
+            <img src="https://images.pexels.com/photos/4552191/pexels-photo-4552191.jpeg" alt="Shrimp Cocktail" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Chilled jumbo shrimp served with zesty cocktail sauce and fresh lemon wedges.</p>
+        </li>
+    </ul>
+
+    <h2>Main Courses</h2>
+    <ul>
+        <li>
+            <strong>Grilled Salmon</strong>
+            <img src="https://images.unsplash.com/photo-1580959375944-abd7e991f971?w=500&h=400&fit=crop" alt="Grilled Salmon" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Salmon fillet seasoned and grilled to perfection, served with lemon butter sauce.</p>
+        </li>
+        <li>
+            <strong>Ribeye Steak</strong>
+            <img src="https://images.unsplash.com/photo-1432139555190-58524dae6a55?w=500&h=400&fit=crop" alt="Ribeye Steak" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Premium grade ribeye steak cooked to your preferred temperature, accompanied by roasted vegetables and mashed potatoes.</p>
+        </li>
+        <li>
+            <strong>Margherita Pasta</strong>
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500&h=400&fit=crop" alt="Margherita Pasta" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Creamy pesto pasta with fresh basil, cherry tomatoes, and parmesan cheese.</p>
+        </li>
+    </ul>
+
+    <h2>Desserts</h2>
+    <ul>
+        <li>
+            <strong>Chocolate Fondue</strong>
+            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=400&fit=crop" alt="Chocolate Fondue" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Assorted fruits and marshmallows served with rich chocolate fondue.</p>
+        </li>
+        <li>
+            <strong>Tiramisu</strong>
+            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=500&h=400&fit=crop" alt="Tiramisu" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Classic Italian dessert made with layers of coffee-soaked ladyfingers and creamy mascarpone cheese.</p>
+        </li>
+        <li>
+            <strong>Strawberry Cheesecake</strong>
+            <img src="https://images.pexels.com/photos/5632594/pexels-photo-5632594.jpeg" alt="Strawberry Cheesecake" style="width: 300px; height: 200px; object-fit: cover;">
+            <p>Smooth and creamy cheesecake topped with fresh strawberries and a sweet glaze.</p>
+        </li>
+    </ul>
+
+    <p><a href="contact.html">Contact us for reservations</a></p>
+</body>
+</html>
